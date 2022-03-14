@@ -248,7 +248,7 @@ usage! {
 
             ARG arg_chain: (String) = "foundation", or |c: &Config| c.parity.as_ref()?.chain.clone(),
             "--chain=[CHAIN]",
-            "Specify the blockchain type. CHAIN may be either a JSON chain specification file or ethereum, poacore, xdai, volta, ewc, musicoin, ellaism, mix, callisto, morden, ropsten, kovan, rinkeby, goerli, poasokol, testnet, yolo3 or dev.",
+            "Specify the blockchain type. CHAIN may be either a JSON chain specification file or ethereum, classic, poacore, xdai, volta, ewc, musicoin, ellaism, mix, callisto, morden, mordor, ropsten, kovan, rinkeby, goerli, kotti, poasokol, testnet, or dev.",
 
             ARG arg_keys_path: (String) = "$BASE/keys", or |c: &Config| c.parity.as_ref()?.keys_path.clone(),
             "--keys-path=[PATH]",
@@ -1176,14 +1176,14 @@ mod tests {
         // given
         let mut config = Config::default();
         let mut operating = Operating::default();
-        operating.chain = Some("goerli".into());
+        operating.chain = Some("mordor".into());
         config.parity = Some(operating);
 
         // when
         let args = Args::parse_with_config(&["openethereum"], config).unwrap();
 
         // then
-        assert_eq!(args.arg_chain, "goerli".to_owned());
+        assert_eq!(args.arg_chain, "mordor".to_owned());
     }
 
     #[test]
@@ -1191,7 +1191,7 @@ mod tests {
         // given
         let mut config = Config::default();
         let mut operating = Operating::default();
-        operating.chain = Some("goerli".into());
+        operating.chain = Some("mordor".into());
         config.parity = Some(operating);
 
         // when

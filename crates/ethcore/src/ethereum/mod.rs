@@ -50,6 +50,14 @@ pub fn new_foundation<'a, T: Into<SpecParams<'a>>>(params: T) -> Spec {
     )
 }
 
+/// Create a new Classic mainnet chain spec without the DAO hardfork.
+pub fn new_classic<'a, T: Into<SpecParams<'a>>>(params: T) -> Spec {
+    load(
+        params.into(),
+        include_bytes!("../../res/ethereum/classic.json"),
+    )
+}
+
 /// Create a new POA Network mainnet chain spec.
 pub fn new_poanet<'a, T: Into<SpecParams<'a>>>(params: T) -> Spec {
     load(
@@ -79,6 +87,14 @@ pub fn new_ewc<'a, T: Into<SpecParams<'a>>>(params: T) -> Spec {
     load(
         params.into(),
         include_bytes!("../../res/chainspec/ewc.json"),
+    )
+}
+
+/// Create a new Expanse mainnet chain spec.
+pub fn new_expanse<'a, T: Into<SpecParams<'a>>>(params: T) -> Spec {
+    load(
+        params.into(),
+        include_bytes!("../../res/ethereum/expanse.json"),
     )
 }
 
@@ -156,6 +172,14 @@ pub fn new_goerli<'a, T: Into<SpecParams<'a>>>(params: T) -> Spec {
     )
 }
 
+/// Create a new Kotti testnet chain spec.
+pub fn new_kotti<'a, T: Into<SpecParams<'a>>>(params: T) -> Spec {
+    load(
+        params.into(),
+        include_bytes!("../../res/ethereum/kotti.json"),
+    )
+}
+
 /// Create a new POA Sokol testnet chain spec.
 pub fn new_sokol<'a, T: Into<SpecParams<'a>>>(params: T) -> Spec {
     load(
@@ -168,6 +192,14 @@ pub fn new_yolo3<'a, T: Into<SpecParams<'a>>>(params: T) -> Spec {
     load(
         params.into(),
         include_bytes!("../../res/chainspec/yolo3.json"),
+    )
+}
+
+/// Create a new Morodor testnet chain spec.
+pub fn new_mordor<'a, T: Into<SpecParams<'a>>>(params: T) -> Spec {
+    load(
+        params.into(),
+        include_bytes!("../../res/ethereum/mordor.json"),
     )
 }
 
