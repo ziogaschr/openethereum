@@ -1,5 +1,7 @@
 # OpenEthereum
 
+> ATTENTION: This is used for cross checking core-geth's tracer compatibility. Do not use this for production.
+
 Fast and feature-rich multi-network Ethereum client.
 
 [» Download the latest release «](https://github.com/openethereum/openethereum/releases/latest)
