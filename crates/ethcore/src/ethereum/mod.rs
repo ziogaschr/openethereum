@@ -54,7 +54,7 @@ pub fn new_foundation<'a, T: Into<SpecParams<'a>>>(params: T) -> Spec {
 pub fn new_classic<'a, T: Into<SpecParams<'a>>>(params: T) -> Spec {
     load(
         params.into(),
-        include_bytes!("../../res/ethereum/classic.json"),
+        include_bytes!("../../res/chainspec/classic.json"),
     )
 }
 
@@ -94,7 +94,7 @@ pub fn new_ewc<'a, T: Into<SpecParams<'a>>>(params: T) -> Spec {
 pub fn new_expanse<'a, T: Into<SpecParams<'a>>>(params: T) -> Spec {
     load(
         params.into(),
-        include_bytes!("../../res/ethereum/expanse.json"),
+        include_bytes!("../../res/chainspec/expanse.json"),
     )
 }
 
@@ -176,7 +176,7 @@ pub fn new_goerli<'a, T: Into<SpecParams<'a>>>(params: T) -> Spec {
 pub fn new_kotti<'a, T: Into<SpecParams<'a>>>(params: T) -> Spec {
     load(
         params.into(),
-        include_bytes!("../../res/ethereum/kotti.json"),
+        include_bytes!("../../res/chainspec/kotti.json"),
     )
 }
 
@@ -199,7 +199,7 @@ pub fn new_yolo3<'a, T: Into<SpecParams<'a>>>(params: T) -> Spec {
 pub fn new_mordor<'a, T: Into<SpecParams<'a>>>(params: T) -> Spec {
     load(
         params.into(),
-        include_bytes!("../../res/ethereum/mordor.json"),
+        include_bytes!("../../res/chainspec/mordor.json"),
     )
 }
 
