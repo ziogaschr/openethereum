@@ -3,7 +3,7 @@
 # build with `cargo build --verbose`
 
 ./target/debug/openethereum \
-  --base-path /root/datadir \
+  --base-path /root/datadir/mordor \
   --chain=mordor \
   --no-ws \
   --no-discovery \
@@ -16,10 +16,14 @@
   --jsonrpc-interface=all \
   --jsonrpc-apis=all \
   --allow-ips=private \
-  --max-peers=1
-
-  # -l devp2p=trace,network=trace \
+  --max-peers=1 \
+  --fat-db=on \
+  --no-warp
+  # --no-seal-check \
   # -l trace \
+
+  # -l snapshot=trace \
+  # -l devp2p=trace,network=trace \
   # --unsafe-expose \
   # --no-ipc \
   # --jsonrpc-hosts=all \
