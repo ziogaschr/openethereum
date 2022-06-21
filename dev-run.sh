@@ -19,6 +19,7 @@
   --max-peers=1 \
   --fat-db=on \
   --no-warp
+
   # --no-seal-check \
   # -l trace \
 
@@ -32,3 +33,9 @@
 
 # --nat extip:$(curl -s http://checkip.dyndns.com/ | sed 's/[^0-9\.]//g')
 #  > ./parity.log 2>&1
+
+
+# ./target/debug/openethereum \
+#   --base-path /root/datadir/mordor \
+#   --chain=mordor \
+#   db reset 100
